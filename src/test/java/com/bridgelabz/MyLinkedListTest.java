@@ -83,4 +83,18 @@ public class MyLinkedListTest {
                 myLinkedList.head.getNext().equals(mySecondNode);
         Assert.assertTrue(result);
     }
+
+    //UC7
+    @Test
+    public void given3NumbersWhenSearched30ShouldGiveItsPosition() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.add(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.printMyNodes();
+        Assert.assertEquals(myLinkedList.search(mySecondNode),mySecondNode);
+    }
 }
