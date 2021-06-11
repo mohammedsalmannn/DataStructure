@@ -1,7 +1,5 @@
 package com.bridgelabz;
 
-import com.bridgelabz.INode;
-
 public class MyLinkedList<K> {
     public INode head;
     public INode tail;
@@ -37,6 +35,11 @@ public class MyLinkedList<K> {
         INode tempNode = myNode.getNext();
         myNode.setNext(newNode);
         newNode.setNext(tempNode);
+    }
+    public INode pop(){
+        INode tempNode = this.head;
+        this.head = head.getNext();
+        return tempNode;
     }
     public void printMyNodes() {
         StringBuffer myNodes = new StringBuffer("My Nodes: ");
