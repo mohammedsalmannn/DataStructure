@@ -1,6 +1,5 @@
 package com.bridgelabz;
 
-import com.bridgelabz.MyNode;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -65,6 +64,23 @@ public class MyLinkedListTest {
         myLinkedList.printMyNodes();
         boolean result = myLinkedList.head.equals(mySecondNode) &&
                 myLinkedList.head.getNext().equals(myThirdNode);
+        Assert.assertTrue(result);
+    }
+
+    //UC6
+    @Test
+    public void given3NumbersWhenPoppedShouldRemoveTheLastNode() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.add(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.popLast();
+        myLinkedList.printMyNodes();
+        boolean result = myLinkedList.head.equals(myFirstNode) &&
+                myLinkedList.head.getNext().equals(mySecondNode);
         Assert.assertTrue(result);
     }
 }
