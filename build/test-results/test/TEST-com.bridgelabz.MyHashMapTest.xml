@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.MyHashMapTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-16T05:19:57" hostname="DESKTOP-T79M02P" time="0.013">
+<testsuite name="com.bridgelabz.MyHashMapTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-16T06:06:37" hostname="DESKTOP-T79M02P" time="0.017">
   <properties/>
-  <testcase name="givenASentence_WhenWordAreAddedToList_ShouldReturnWordFrequency" classname="com.bridgelabz.MyHashMapTest" time="0.013"/>
-  <system-out><![CDATA[com.bridgelabz.MyHashMap@10ca7ca
+  <testcase name="givenSentenceWhenWordsAreAddedToListShouldReturnParanoidFrequency" classname="com.bridgelabz.MyHashMapTest" time="0.017"/>
+  <system-out><![CDATA[MyLinkedHashMap List{[com.bridgelabz.MyLinkedList@10ca7ca, com.bridgelabz.MyLinkedList@5b59b0, com.bridgelabz.MyLinkedList@bea13e, null, null, com.bridgelabz.MyLinkedList@1b73018, com.bridgelabz.MyLinkedList@153f553, com.bridgelabz.MyLinkedList@125a090, com.bridgelabz.MyLinkedList@d5405b, com.bridgelabz.MyLinkedList@5889e9]}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
