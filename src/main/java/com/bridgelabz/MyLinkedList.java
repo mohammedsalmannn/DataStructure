@@ -56,13 +56,31 @@ public class MyLinkedList<K> {
     }
 
     public INode search(INode newNode){
-        int count = 0;
+        //int count = 0;
         INode tempNode = this.head;
         while (!tempNode.getNext().equals(newNode)) {
             tempNode = tempNode.getNext();
         }
         return tempNode.getNext();
     }
+    public INode search(K key){
+        INode tempNode = this.head;
+        while (tempNode != null && tempNode.getNext() != null) {
+            if (tempNode.getKey().equals(key)) {
+                return tempNode;
+            }
+            tempNode = tempNode.getNext();
+        }
+        return null;
+    }
+
+//    public INode sort(){
+//        INode tempNode = this.head;
+//        (!tempNode.getNext().equals(tail)){
+//            if (!(this.head <= tempNode))
+//        }
+//        return null;
+//    }
 
     public void printMyNodes() {
         StringBuffer myNodes = new StringBuffer("My Nodes: ");

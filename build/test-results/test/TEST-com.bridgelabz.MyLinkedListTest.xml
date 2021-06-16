@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.MyLinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-11T02:43:34" hostname="DESKTOP-T79M02P" time="0.01">
-  <properties/>
-  <testcase name="given3NumbersWhenSearched30ShouldGiveItsPosition" classname="com.bridgelabz.MyLinkedListTest" time="0.01"/>
-  <system-out><![CDATA[My Nodes: 56->30->70
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

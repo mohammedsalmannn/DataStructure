@@ -2,3 +2,5 @@ MyNodeTest.java
  MyNodeTest
 com/bridgelabz/MyLinkedListTest.java
  com.bridgelabz.MyLinkedListTest
+com/bridgelabz/MyHashMapTest.java
+ com.bridgelabz.MyHashMapTest
