@@ -1,5 +1,8 @@
 package com.bridgelabz;
 
+
+import java.awt.font.TextMeasurer;
+
 public class MyLinkedList<K> {
     public INode head;
     public INode tail;
@@ -8,7 +11,6 @@ public class MyLinkedList<K> {
         this.head = null;
         this.tail = null;
     }
-
     public void append(INode<K> myNode) {
         if (this.head == null) {
             this.head = myNode;
@@ -32,19 +34,16 @@ public class MyLinkedList<K> {
             this.head.setNext(tempNode);
         }
     }
-
     public void insert(INode myNode, INode newNode) {
         INode tempNode = myNode.getNext();
         myNode.setNext(newNode);
         newNode.setNext(tempNode);
     }
-
     public INode pop(){
         INode tempNode = this.head;
         this.head = head.getNext();
         return tempNode;
     }
-
     public INode popLast(){
         INode tempNode = this.head;
         while(!tempNode.getNext().equals(tail)) {
@@ -53,15 +52,6 @@ public class MyLinkedList<K> {
         this.tail = tempNode;
         tempNode = tempNode.getNext();
         return tempNode;
-    }
-
-    public INode search(INode newNode){
-        //int count = 0;
-        INode tempNode = this.head;
-        while (!tempNode.getNext().equals(newNode)) {
-            tempNode = tempNode.getNext();
-        }
-        return tempNode.getNext();
     }
     public INode search(K key){
         INode tempNode = this.head;
@@ -73,15 +63,24 @@ public class MyLinkedList<K> {
         }
         return null;
     }
-
-//    public INode sort(){
-//        INode tempNode = this.head;
-//        (!tempNode.getNext().equals(tail)){
-//            if (!(this.head <= tempNode))
-//        }
-//        return null;
-//    }
-
+    public INode delete(K key) {
+        INode<K> tempNode = this.head;
+        while (tempNode.getNext().getKey()!= key ){
+            tempNode = tempNode.getNext();
+        }
+        INode deleteNode = tempNode.getNext();
+        tempNode.setNext(tempNode.getNext().getNext());
+        return deleteNode;
+    }
+    public void size(){
+        int size=0;
+        INode tempNode = this.head;
+        while(!tempNode.getNext().equals(tail)) {
+            tempNode = tempNode.getNext();
+            size++;
+        }
+        System.out.println("Size is: " + (size+2));
+    }
     public void printMyNodes() {
         StringBuffer myNodes = new StringBuffer("My Nodes: ");
         INode tempNode = head;
@@ -92,5 +91,10 @@ public class MyLinkedList<K> {
         }
         myNodes.append(tempNode.getKey());
         System.out.println(myNodes);
+    }
+
+    @Override
+    public String toString() {
+        return "MyLinkedListNodes{" + head + '}';
     }
 }

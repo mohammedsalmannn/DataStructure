@@ -4,9 +4,9 @@ com/bridgelabz/INode.java
  com.bridgelabz.INode
 com/bridgelabz/MyMapNode.java
  com.bridgelabz.MyMapNode
+com/bridgelabz/MyLinkedHashMap.java
+ com.bridgelabz.MyLinkedHashMap
 com/bridgelabz/MyHashMap.java
  com.bridgelabz.MyHashMap
 com/bridgelabz/MyLinkedList.java
  com.bridgelabz.MyLinkedList
-com/bridgelabz/MyLinkedashMap.java
- com.bridgelabz.MyLinkedHashMap

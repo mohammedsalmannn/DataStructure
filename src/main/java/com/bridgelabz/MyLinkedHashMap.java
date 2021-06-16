@@ -1,7 +1,9 @@
 package com.bridgelabz;
+
+
 import java.util.ArrayList;
 
- class MyLinkedHashMap<K, V> {
+public class MyLinkedHashMap<K, V> {
     private final int numBuckets;
     ArrayList<MyLinkedList<K>> myBucketArray;
 
@@ -46,7 +48,19 @@ import java.util.ArrayList;
         }
     }
 
+    public K delete(K key) {
+        int index = this.getBucketIndex(key);
+        MyLinkedList<K> myLinkedList = this.myBucketArray.get(index);
+        if (myLinkedList == null) {
+            return null;
+        }
+        MyMapNode<K,V> myMapNode = (MyMapNode<K, V>) myLinkedList.delete(key);
+        return (myMapNode == null) ? null : myMapNode.getKey();
+    }
+
     @Override
     public String toString() {
         return "MyLinkedHashMap List{" + myBucketArray +'}' ; }
+
+
 }
